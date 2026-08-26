@@ -1,0 +1,154 @@
+:root {
+    /*variabel warna*/
+    --primary-blue: #6d9bb8;
+    --logo-grad-1: #C4494B;
+    --logo-grad-2: #EF9B0F;
+    --logo-grad-3: #FEDA49;
+    --logo-grad-4:#69AFEA;
+
+
+}
+
+body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-style: normal;
+    background-color: #fbfafa !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+/* Container Utama (Mockup HP) */
+.phone-canvas {
+    width: 450px;
+    height: 750px;
+    background: white;
+    border-radius: 35px;
+    margin: 40px 0 40px 0;
+    padding: 50px 25px 30px 25px;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(70, 70, 70, 0.2);    
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Styling Logo Moorasa*/
+.logo-text {
+    font-family: "Lexend", sans-serif;
+    font-weight: bold;
+    font-style: normal; 
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    display: inline-block;
+    background: linear-gradient(to right, var(--logo-grad-1), var(--logo-grad-2), var(--logo-grad-3), var(--logo-grad-4));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+        
+.logo {
+    width: 200px;
+    display: flex;
+    margin: 0 auto 15px auto;    
+}
+
+/* Form Styling*/
+.form-label-custom {
+    font-weight: 680;
+    font-size: 189x;
+    color: #0b0a0a;
+    margin-bottom: 25px;
+    display: block;
+    text-align: center;
+}
+
+.input-wrapper label {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    display: flex;
+    text-align: left;
+}
+
+.form-control {
+    border-radius: 10px;
+    padding: 12px 15px;
+    border: 1px solid #2b2b2b2b;
+    margin-bottom: 30px;
+    font-size: 0.9rem;
+    color: #000000f7;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.input-wrapper i{
+    position: absolute;
+    right: 15px;
+    top: 13px;
+    color: #000000f6;
+    cursor: pointer;
+}
+
+/* Button Styling*/
+.btn-custom {
+    width: 100%;
+    padding: 12px;
+    border-radius: 25px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    transition: 0.3s;
+    color: white;
+    text-decoration: none;
+}
+
+.btn-signup {
+    background-color: var(--primary-blue);
+    color: white;
+    border: none;
+    text-decoration: none;
+}
+.btn-signup a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight:  bold;
+}
+
+.btn-primary-custom {
+    background-color: #6d9bb8;
+    border: none;
+    border-radius: 25px;
+    padding: 12px;
+    font-weight: 600;
+    width: 100%;
+    color: white;
+    transition: 0.3s;
+}
+
+.btn-primary-custom:hover {
+    background-color:#6d9bb8 ;
+}
+
+.btn-outline-custom {
+    background-color: transparent;
+    border: 1px solid var(--primary-blue);
+    border-radius: 25px;
+    padding: 12px;
+    font-weight: 600;
+    width: 100%;
+    color: var(--primary-blue);
+    margin-top: 10px;
+}
+
+.footer-link {
+    text-align: center;
+    font-size: 17px;
+    color: #000000f7;
+}
+
+.footer-link a {
+    color: #6c63ff;
+    text-decoration: none;
+    font-weight: 10px;
+}
