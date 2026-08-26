@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moorasa - Beranda</title>
+  <link rel="stylesheet" href="../motivation page/css/style.css">
+</head>
+<body>
+
+  <!-- App Wrapper Mobile -->
+  <div class="mobile-container">
+    
+    <!-- Dashboard Utama -->
+    <div id="dashboard" class="dashboard">
+      <!-- Navbar / Topbar -->
+      <div class="topbar">
+        <div class="brand">
+          <span class="logo-icon"></span> 
+          <span class="brand-name">Moo<span class="highlight">Rasa</span></span>
+        </div>
+        <div class="topbar-right">
+          <span class="crown">👑</span>
+          <div class="avatar">👤</div>
+        </div>
+      </div>
+
+      <!-- Header Sapaan -->
+      <div class="greeting">
+        <h2>Halo, Teman MooRasa</h2>
+        <p>Bagaimana Perasaan Anda Hari Ini?</p>
+      </div>
+
+      <!-- Fitur Grid -->
+      <div class="features-section">
+        <h3>Fitur-Fitur</h3>
+
+        <!-- Banner Besar -->
+        <div class="card card-large">
+          <img src="https://via.placeholder.com/100" alt="Catatan Harian">
+          <span>Catatan Harian</span>
+        </div>
+
+        <!-- Grid 2 Kolom -->
+        <div class="grid-2">
+          <div class="card">
+            <img src="https://via.placeholder.com/60" alt="Fitur Penenang">
+            <span>Fitur Penenang</span>
+          </div>
+          <div class="card">
+            <img src="https://via.placeholder.com/60" alt="Pengambilan Hadiah">
+            <span>Pengambilan Hadiah</span>
+          </div>
+          <div class="card">
+            <img src="https://via.placeholder.com/60" alt="Riwayat Mood">
+            <span>Riwayat Mood</span>
+          </div>
+          <div class="card">
+            <img src="https://via.placeholder.com/60" alt="Konsultasi">
+            <span>Konsultasi</span>
+          </div>
+        </div>
+
+        <!-- Bottom Large Card -->
+        <div class="card card-large bottom-card">
+          <img src="https://via.placeholder.com/80" alt="Wadah Emosi">
+          <span>Wadah Emosi</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Transparent Touch Overlay (Menangkap sentuhan pertama) -->
+    <div id="touch-overlay" class="touch-overlay hidden"></div>
+
+    <!-- Modal Pop-up Motivasi -->
+    <div id="motivation-modal" class="modal hidden">
+      <div class="modal-content">
+        <button id="close-btn" class="close-btn">&times;</button>
+        <p class="quote">
+          "Kamu tidak harus hebat setiap hari, cukup berusaha untuk menjadi lebih baik dari kemarin"
+        </p>
+        <p class="sub-quote">
+          Aku berharga, aku cukup, dan aku layak bahagia
+        </p>
+      </div>
+    </div>  
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
