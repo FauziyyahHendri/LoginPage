@@ -1,3 +1,7 @@
+*{
+    margin: 0%;
+    padding: 0px;
+}
 :root {
     /*variabel warna*/
     --primary-blue: #6d9bb8;

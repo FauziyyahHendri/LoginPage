@@ -5,33 +5,179 @@
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
+:root {
+  /*variabel warna*/
+  --primary-blue: #6d9bb8;
+  --logo-grad-1: #C4494B;
+  --logo-grad-2: #EF9B0F;
+  --logo-grad-3: #FEDA49;
+  --logo-grad-4:#69AFEA;
+
+
+}
+
 body {
-  background-color: #e5e5e5;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  background-color: #fff7f7 !important;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   min-height: 100vh;
+  margin: 0;
 }
 
 /* Frame Mobile */
 .mobile-container {
-  width: 100%;
-  max-width: 390px;
-  height: 100vh;
-  max-height: 844px;
-  background: #ffffff;
-  position: relative;
-  overflow-y: auto;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  border-radius: 20px;
+    width: 450px;
+    height: 870px;
+    background: white;
+    border-radius: 50px;
+    margin: 35px 0 35px 0;
+    padding: 30px 15px 30px 15px;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(70, 70, 70, 0.2);    
+    text-align: center;
+    overflow: hidden;
 }
 
-/* 1. Pengaturan Dasar Dashboard */
+/*Splash Screen (halaman transisi) */
+/* Splash screen memblokir semua interaksi klik di awal */
+#splash-screen {
+  position: absolute !important; /* Wajib fixed agar menutupi seluruh layar dan ikut scroll */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff; /* Latar putih pekat */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999; /* Memastikan posisi di atas semua elemen */
+  pointer-events: auto; /* Memblokir klik saat splash screen tampil */
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+/* Saat Splash Screen Hilang (Fade Out Mulus Tanpa Blur Bocor) */
+#splash-screen.hide {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none; /* Kunci klik terbuka setelah splash screen hilang */
+}
+
+.logo-text-splash { /*ini css logo splash screen*/
+    font-family: "Lexend" sans-serif;
+    font-weight: 800;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    display: inline-block;
+    background: linear-gradient(to right, var(--logo-grad-1), var(--logo-grad-2), var(--logo-grad-3), var(--logo-grad-4));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.illustration {
+    width: 380px;
+    margin-bottom: 0px;
+    display: flex;
+    margin: 0;
+}
+
+/* Topbar Moorasa */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: #ffffff;
+  position: relative; /* Agar posisi judul bisa dipaksa ke tengah */
+}
+
+/*logo nama*/
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  cursor: pointer;
+}
+
+.logo-text { /*ini css nya logo di top bar*/
+    font-family: "Lexend", sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
+    font-style: normal; 
+    letter-spacing: 1px;
+    justify-content: center;
+    display: flex;
+    background: linear-gradient(to right, var(--logo-grad-1), var(--logo-grad-2), var(--logo-grad-3), var(--logo-grad-4));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+        
+.logo {
+    width: 30px;
+    display: flex;
+    margin: 0;  
+}
+
+/*tulisan tengah*/
+.page-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 16px;
+  font-weight: 700;
+  color: #000000;
+  margin: 0;
+}
+
+/*bagian kanan*/
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Ukuran Ikon Mahkota */
+.crown-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+/* Mengubah Foto Profil Jadi Bulat Sempurna */
+.profile-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;     /* KUNCI: Membuat gambar menjadi bulat */
+  object-fit: cover;      /* Mencegah gambar terdistorsi/gepeng */
+  display: block;
+  cursor: pointer;
+}
+
+/* 1. Pengaturan Dasar Dashboard*/
 .dashboard {
   width: 100%;
   height: 100%;
   background-color: #ffffff;
   transition: filter 0.3s ease;
+}
+.welcome-screen{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    z-index: 2;
+    background: white;
+    opacity: 0; /* Tersembunyi di awal */
+    transition: opacity 0.8s ease;
 }
 
 /* 2. Efek Blur (Wajib gunakan backdrop-filter atau filter yang kuat) */
@@ -72,6 +218,10 @@ body {
 }
 
 .modal-content {
+  width: 90% !important;        /* Memperbesar lebar relatif dari 80% ke 90% */
+  max-width: 360px !important;  /* Menaikkan batas lebar maksimal (misal dari 300px ke 360px) */
+  height: 200px;
+  box-sizing: border-box;
   background-color: #6499be;
   color: white;
   padding: 30px 20px;
@@ -80,118 +230,6 @@ body {
   position: relative;
   box-shadow: 0 10px 20px rgba(0,0,0,0.15);
   animation: fadeInPop 0.5s ease-out forwards;
-}
-
-.modal-content:hover .quote {
-  transform: translateY(-2px); /* Teks sedikit naik saat kotak di-hover */
-}
-
-.modal.hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-
-@keyframes fadeInPop {
-  from {
-    opacity: 0;
-    transform: scale(0.9); /* Sedikit mengecil di awal */
-  }
-  to {
-    opacity: 1;
-    transform: scale(1); /* Ukuran normal */
-  }
-}
-
-/* Topbar Moorasa */
-.topbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 20px 10px;
-}
-
-.brand {
-  font-weight: bold;
-  font-size: 18px;
-  color: #d97706;
-}
-
-.brand .highlight {
-  color: #2563eb;
-}
-
-.topbar-right {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-/* Greeting */
-.greeting {
-  padding: 10px 20px 20px;
-}
-
-.greeting h2 {
-  font-size: 18px;
-  color: #1f2937;
-}
-
-.greeting p {
-  font-size: 12px;
-  color: #6b7280;
-}
-
-/* Fitur-Fitur UI */
-.features-section {
-  padding: 0 20px 20px;
-}
-
-.features-section h3 {
-  font-size: 16px;
-  margin-bottom: 12px;
-  color: #374151;
-}
-
-.card {
-  border: 1.5px solid #93c5fd;
-  border-radius: 16px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 15px;
-  background: #fff;
-}
-
-.card span {
-  font-size: 12px;
-  color: #2563eb;
-  font-weight: 500;
-  margin-top: 8px;
-}
-
-.card-large {
-  width: 100%;
-  margin-bottom: 12px;
-}
-
-.grid-2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  margin-bottom: 12px;
-}
-
-/* Overlay Sentuhan Pertama */
-.touch-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 10;
-  cursor: pointer;
 }
 
 .close-btn {
@@ -206,18 +244,121 @@ body {
 }
 
 .quote {
-  font-size: 13px;
-  line-height: 1.5;
-  margin-bottom: 15px;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  font-size: 15px;
+  padding: 1px 16px; /* 12px atas-bawah, 16px kiri-kanan */
+  margin: 10px;     /* Jarak luar dari tombol/elemen lain */
+  line-height: 1.6;   /* Jarak antar baris teks agar lebih lega & mudah dibaca */
+  text-align: center; /* Membuat teks rata tengah */
 }
 
 .sub-quote {
-  font-size: 12px;
+  padding-bottom: 30px;
+  font-size: 13px;
+  font-weight: 200;
   font-weight: 600;
   transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Overlay Sentuhan Pertama */
+.touch-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  cursor: pointer;
 }
 
 .hidden {
   display: none !important;
 }
+
+
+.modal.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+
+@keyframes fadeInPop {
+  from {
+    opacity: 0;
+    transform: scale(0.9); /* Sedikit mengecil di awal */
+  }
+  to {
+    opacity: 1;
+    transform: scale(1); /* Ukuran normal */
+  }
+}
+
+/* Greeting */
+.greeting {
+  font-family: "Plus Jakarta Sans" sans-serif;
+  font-weight: 500;
+  text-align: left;
+  padding: 10px 20px 20px;
+}
+
+.greeting h2 {
+  font-size: 18px;
+  color: #1f2937;
+}
+
+.greeting p {
+  font-size: 12px;
+  color: #414347;
+}
+
+/* Fitur-Fitur UI */
+.features-section {
+  padding: 0 12px 20px; /* Jarak tepi luar diperkecil agar lebih luas */
+  box-sizing: border-box;
+}
+
+.features-section h3 {
+  font-size: 16px;
+  margin-bottom: 12px;
+  color: #374151;
+  text-align: center;
+}
+
+/* Kunci utama: Hapus semua border/padding bawaan card */
+.card, .card-large {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-shadow: none !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer; /* Mengubah kursor jadi tangan saat di-hover */
+}
+
+/* Gambar tampil utuh */
+.card img, .card-large img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Banner Atas & Bawah (Lebar 80% & Rata Tengah) */
+.card-large {
+  width: 75%;
+  margin: 0 auto 25px auto !important;
+}
+
+/* Grid 2 Kolom (Lebar 80% & Rata Tengah) */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  width: 75%;
+  margin: 0 auto 12px auto; /* Perbaikan typo margin */
+}
+
+/*animasi*/
+.card:hover, .card-large:hover {
+  transform: translateY(-4px) scale(1.02); /* MEMBESAR & NAIK */
+}
+

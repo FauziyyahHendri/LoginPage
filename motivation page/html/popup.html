@@ -4,24 +4,46 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Moorasa - Beranda</title>
-  <link rel="stylesheet" href="../motivation page/css/style.css">
+  <!--link css-->
+  <link rel="stylesheet" href="../css/style.css">
+  <!--link bootsrap-->
+  <!--link font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!--Title font-->
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+  <!--link font body-->
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+
+
 </head>
 <body>
 
   <!-- App Wrapper Mobile -->
   <div class="mobile-container">
+
+    <!--splash screen-->
+    <div id="splash-screen">
+      <img src="../img/logo.png" class="illustration" alt="logo">
+      <h2 class="logo-text-splash">MooRasa</h2>
+    </div>
     
     <!-- Dashboard Utama -->
-    <div id="dashboard" class="dashboard">
+    <div id="dashboard" class="dashboard blured">
       <!-- Navbar / Topbar -->
       <div class="topbar">
         <div class="brand">
-          <span class="logo-icon"></span> 
-          <span class="brand-name">Moo<span class="highlight">Rasa</span></span>
+          <a href="#"></a>
+          <img src="../img/logo.jpeg" class="logo" alt="logo">
+          <h6 class="logo-text">MooRasa</h6>
         </div>
+
+        <!--beranda-->
+        <h2 class="page-title">Beranda</h2>
+
         <div class="topbar-right">
-          <span class="crown">👑</span>
-          <div class="avatar">👤</div>
+          <img src="../img/crown.png" alt="Premium" class="crown-icon">
+          <img src="../img/profil.jpg" alt="Profile" class="profile-avatar">
         </div>
       </div>
 
@@ -37,35 +59,34 @@
 
         <!-- Banner Besar -->
         <div class="card card-large">
-          <img src="https://via.placeholder.com/100" alt="Catatan Harian">
-          <span>Catatan Harian</span>
+          <a href="#"></a>
+          <img src="../img/catatan-harian.png" alt="Catatan Harian">
         </div>
 
         <!-- Grid 2 Kolom -->
         <div class="grid-2">
           <div class="card">
-            <img src="https://via.placeholder.com/60" alt="Fitur Penenang">
-            <span>Fitur Penenang</span>
+            <a href="#"></a>
+            <img src="../img/penenang.png" alt="Fitur Penenang">
           </div>
           <div class="card">
-            <img src="https://via.placeholder.com/60" alt="Pengambilan Hadiah">
-            <span>Pengambilan Hadiah</span>
+            <a href="#"></a>
+            <img src="../img/hadiah.png" alt="Pengambilan Hadiah">
           </div>
           <div class="card">
-            <img src="https://via.placeholder.com/60" alt="Riwayat Mood">
-            <span>Riwayat Mood</span>
+            <a href="#"></a>
+            <img src="../img/riwayat-mood.png" alt="Riwayat Mood">
           </div>
           <div class="card">
-            <img src="https://via.placeholder.com/60" alt="Konsultasi">
-            <span>Konsultasi</span>
+            <a href="#"></a>
+            <img src="../img/konsultasi.png" alt="Konsultasi">
+          </div>
+          <div class="card">
+            <a href="#"></a>
+            <img src="../img/wadah-emoji.png" alt="Wadah Emosi">
           </div>
         </div>
 
-        <!-- Bottom Large Card -->
-        <div class="card card-large bottom-card">
-          <img src="https://via.placeholder.com/80" alt="Wadah Emosi">
-          <span>Wadah Emosi</span>
-        </div>
       </div>
     </div>
 
@@ -80,13 +101,28 @@
           "Kamu tidak harus hebat setiap hari, cukup berusaha untuk menjadi lebih baik dari kemarin"
         </p>
         <p class="sub-quote">
-          Aku berharga, aku cukup, dan aku layak bahagia
+          -Aku berharga, aku cukup, dan aku layak bahagia-
         </p>
       </div>
     </div>  
 
   </div>
 
-  <script src="script.js"></script>
+  <script src="../script.js"></script> <!--ini js untuk efek blur-->
+
+  <!--ini js untuk transisi splash screen-->
+  <script>
+    // Logika Transisi Sederhana 
+    window.onload = () => {
+        const splash = document.getElementById('splash-screen');
+        const welcome = document.getElementById('welcome-screen');
+
+        // Tampilkan Splash selama 2 detik, lalu pindah ke Welcome Screen
+        setTimeout(() => {
+            splash.classList.add('hidden');
+            welcome.classList.add('visible');
+        }, 2000);
+    };
+</script>
 </body>
 </html>

@@ -10,7 +10,7 @@
 }
 
 body {
-    font-family: "Lexend", sans-serif;
+    font-family: "Plus Jakarta Sans", sans-serif;
     font-weight: bold;
     font-style: normal;
     background-color: #fff7f7 !important;
@@ -66,6 +66,7 @@ body {
 
 /* Logo Moorasa Styling */
 .logo-text {
+    font-family: "Lexend" sans-serif;
     font-weight: 800;
     font-size: 2.5rem;
     letter-spacing: 2px;
