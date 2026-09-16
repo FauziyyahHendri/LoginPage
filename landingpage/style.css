@@ -24,8 +24,8 @@
   --footer-text: var(--ink-soft);
   --footer-heading: var(--ink);
 
-  --font-display: 'Fredoka', system-ui, sans-serif;
-  --font-body: 'Inter', system-ui, sans-serif;
+  --font-display: 'Lexend', system-ui, sans-serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
 
   --radius-lg: 28px;
   --radius-md: 18px;
@@ -388,12 +388,6 @@ ul{ list-style: none; margin:0; padding:0; }
 
 .wave-about path {
   fill: #2F5C77;
-}
-.sites{
-  background: #2F5C77;
-  padding: 100px 0 140px;
-  text-align: center;
-  position: relative;
 }
 .about-inner{ max-width: 700px; margin: 0 auto; }
 .about-text{
