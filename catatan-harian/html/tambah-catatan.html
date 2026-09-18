@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MooRasa - Tambah Catatan Harian</title>
+    <link rel="stylesheet" href="../../bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../motivation%20page/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <main class="mobile-container daily-app" aria-label="Tambah Catatan Harian MooRasa">
+        <header class="daily-header">
+            <a class="daily-brand" href="../../motivation%20page/html/dashboard.html" aria-label="Kembali ke Beranda">
+                <img src="../../design-assets/logo_besar.png" alt="">
+                <span>MooRasa</span>
+            </a>
+            <h1>Catatan Harian</h1>
+            <img class="daily-profile" src="../../design-assets/profil.jpg" alt="Profil pengguna">
+        </header>
+        <section class="note-form-area">
+            <div class="form-toolbar">
+                <a class="back-button" href="catatan-harian.html" aria-label="Kembali ke Catatan Harian">
+                    <img src="../../design-assets/arrow.png" alt="">
+                </a>
+                <button class="save-button" id="save-button" type="button" disabled>Simpan</button>
+            </div>
+            <form id="note-form" novalidate>
+                <label for="note-title">Judul</label>
+                <input id="note-title" name="title" type="text" maxlength="48" placeholder="Judul catatan">
+                <label for="note-content">Catatan</label>
+                <textarea id="note-content" name="content" maxlength="400" placeholder="Tambahkan Catatan....."></textarea>
+            </form>
+        </section>
+    </main>
+    <script src="../script.js"></script>
+</body>
+</html>

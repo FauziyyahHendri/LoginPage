@@ -26,14 +26,14 @@ Fokus pekerjaan hanya pada:
 - JavaScript untuk kebutuhan frontend
 - Bootstrap
 - Layout
-- UI/UX implementation
+- UI/UX
 - Responsive design
 - Animasi dan interaksi frontend
 - Navigation frontend
 - Form frontend
-- Tampilan berdasarkan prototype Figma
+- Implementasi berdasarkan Figma
 
-Jangan mengerjakan atau membuat:
+Jangan mengerjakan:
 - Backend
 - Database
 - API backend
@@ -41,81 +41,76 @@ Jangan mengerjakan atau membuat:
 - Authentication backend
 - Server configuration
 - Deployment
-- Infrastruktur backend
 
-Jika suatu fitur membutuhkan backend atau database, jangan membuat backend tersebut.
-
-Laporkan kepada user bahwa bagian tersebut membutuhkan implementasi backend.
+Jika fitur membutuhkan backend atau database, jangan membuatnya. Beri tahu user bahwa fitur tersebut membutuhkan backend.
 
 ---
 
 ## 3. Task Scope
 
-Codex harus mengerjakan project secara bertahap berdasarkan instruksi user.
+Kerjakan project secara bertahap berdasarkan instruksi user.
 
-Kerjakan HANYA tugas yang diberikan oleh user.
+Kerjakan HANYA tugas yang diberikan user.
 
-Jangan mencoba menyelesaikan seluruh project sekaligus.
+Jangan menyelesaikan seluruh project sekaligus.
 
 Jangan membuat fitur lain yang belum diminta.
 
-Jangan melanjutkan ke halaman atau fitur berikutnya tanpa instruksi dari user.
+Jangan mengubah file atau fitur yang tidak diperlukan untuk tugas yang sedang dikerjakan.
 
-Jika user meminta satu halaman atau satu fitur, fokus hanya pada halaman atau fitur tersebut.
-
-Jangan mengubah file atau fitur yang tidak diperlukan untuk menyelesaikan tugas.
+Setelah tugas selesai, berhenti dan tunggu instruksi berikutnya.
 
 ---
 
 ## 4. Existing Project
 
-Project ini sudah memiliki beberapa fitur yang telah dibuat sebelumnya.
+Project sudah memiliki beberapa fitur yang dibuat sebelumnya.
 
-Implementasi fitur baru HARUS mengikuti struktur, style, dan komponen yang sudah ada.
+Sebelum coding:
+1. Periksa struktur folder.
+2. Periksa HTML yang sudah ada.
+3. Periksa CSS yang sudah ada.
+4. Periksa JavaScript yang sudah ada.
+5. Periksa komponen yang sudah tersedia.
+6. Periksa phone container.
+7. Periksa variabel warna.
+8. Periksa gambar dan asset.
+9. Gunakan kembali kode yang sudah ada jika sesuai.
 
 Jangan membuat ulang struktur project jika tidak diperlukan.
-
-Sebelum membuat kode baru:
-
-1. Periksa struktur folder.
-2. Periksa fitur yang sudah ada.
-3. Periksa HTML yang sudah ada.
-4. Periksa CSS yang sudah ada.
-5. Periksa JavaScript yang sudah ada.
-6. Periksa variabel warna yang sudah tersedia.
-7. Periksa phone container yang sudah tersedia.
-8. Periksa gambar dan asset yang sudah tersedia.
-9. Gunakan kembali kode yang sudah ada jika sesuai.
 
 ---
 
 ## 5. Existing Phone Container
 
-Project sudah memiliki kerangka phone container yang digunakan sebagai dasar tampilan aplikasi mobile.
+Project sudah memiliki phone container untuk tampilan mobile.
 
-Gunakan phone container yang sudah tersedia.
+Gunakan phone container yang sudah ada.
 
-Jangan membuat phone container baru jika phone container yang sudah ada dapat digunakan.
+Jangan membuat phone container baru jika yang lama dapat digunakan.
 
-Jangan mengubah ukuran, struktur, atau style phone container yang sudah ada kecuali user memintanya.
+Jangan mengubah ukuran atau struktur phone container tanpa instruksi user.
 
 ---
 
-## 6. Existing Colors
+## 6. Colors from Figma
 
-Project sudah memiliki variabel warna yang telah ditentukan sebelumnya.
+Figma adalah sumber utama untuk menentukan warna desain.
 
-Gunakan variabel warna yang sudah tersedia.
+Ketika mengimplementasikan desain Figma:
 
-Jangan membuat warna baru jika warna yang diperlukan sudah tersedia dalam variabel project.
-
-Jangan mengubah warna utama project tanpa instruksi dari user.
+- Ambil warna dari Figma.
+- Jangan menebak warna.
+- Jika Figma memiliki color variables atau styles, gunakan nilai tersebut.
+- Jika warna tersebut sudah memiliki variabel di project, gunakan variabel project.
+- Jika belum tersedia, tambahkan dengan mengikuti sistem warna project.
+- Jangan membuat warna berdasarkan asumsi sendiri.
+- Background, text, button, border, icon, card, dan elemen lainnya harus mengikuti warna Figma.
+- Jangan mengubah warna fitur lain yang sudah ada.
 
 ---
 
 ## 7. Existing Components and Styles
-
-Project sudah memiliki struktur, komponen, dan style yang dibuat sebelumnya.
 
 Prioritaskan penggunaan kembali:
 - CSS yang sudah ada
@@ -129,54 +124,64 @@ Prioritaskan penggunaan kembali:
 - navigation
 - phone container
 
-Jangan membuat versi baru dari komponen yang sebenarnya sudah tersedia.
-
-Jika komponen yang sudah ada dapat digunakan kembali, gunakan komponen tersebut.
+Jangan membuat versi baru jika komponen yang sudah ada dapat digunakan.
 
 ---
 
 ## 8. Images and Assets
 
-Project sudah memiliki gambar dan asset yang digunakan oleh fitur-fitur sebelumnya.
+Sebelum menggunakan asset baru:
 
-Prioritaskan penggunaan asset yang sudah tersedia.
-
-Jangan mengganti logo atau gambar yang sudah ada tanpa instruksi dari user.
-
-Sebelum menggunakan gambar baru:
-
-1. Periksa apakah gambar tersebut sudah tersedia di project.
-2. Periksa folder `design-assets` jika folder tersebut tersedia.
-3. Jika asset tersedia, gunakan asset tersebut.
+1. Periksa asset yang sudah ada di project.
+2. Periksa folder `design-assets` jika tersedia.
+3. Jika asset sudah tersedia, gunakan kembali.
 4. Jangan menggunakan placeholder jika asset yang sesuai tersedia.
-5. Jangan membuat gambar pengganti jika asset asli tersedia.
-
-Pertahankan struktur folder gambar pada fitur yang sudah ada.
+5. Jangan mengganti logo atau gambar tanpa instruksi user.
 
 Jangan memindahkan atau menghapus asset yang sudah digunakan tanpa alasan yang jelas.
 
 ---
 
-## 9. Bootstrap
+## 9. Icons
+
+Jika membutuhkan icon:
+
+1. Periksa terlebih dahulu apakah icon tersebut sudah tersedia di project.
+2. Jika tersedia, gunakan kembali.
+3. Jika belum tersedia, prioritaskan mencari icon dari Flaticon.
+4. Pilih icon yang sesuai dengan desain dan fungsi pada Figma.
+5. Jangan membuat icon sendiri jika icon yang sesuai tersedia di Flaticon.
+6. Jangan mengganti icon yang sudah ada tanpa instruksi user.
+7. Perhatikan lisensi dan ketentuan penggunaan icon dari Flaticon.
+8. Jika icon membutuhkan atribusi, beri tahu user.
+
+Figma menjadi acuan untuk bentuk, ukuran, posisi, dan penggunaan icon.
+
+Flaticon menjadi sumber utama untuk icon baru.
+
+---
+
+## 10. Bootstrap
 
 Project menggunakan Bootstrap 5.3.8.
 
 Gunakan Bootstrap yang sudah tersedia di project.
 
-Jangan mengganti Bootstrap dengan framework CSS lain.
+Jangan mengganti Bootstrap dengan framework lain.
 
-Jangan menambahkan framework frontend lain tanpa instruksi dari user.
+Jangan menyalin folder Bootstrap baru ke folder fitur.
 
-Jangan membuat atau menyalin folder Bootstrap baru ke dalam folder fitur.
+Gunakan Bootstrap dari:
+
+bootstrap-5.3.8-dist/
 
 ---
 
-## 10. Figma Reference
+## 11. Figma Reference
 
-Prototype dan desain Figma adalah referensi utama untuk implementasi frontend.
+Figma adalah referensi utama untuk implementasi frontend.
 
 Gunakan Figma sebagai acuan untuk:
-
 - Layout
 - Spacing
 - Typography
@@ -192,122 +197,114 @@ Gunakan Figma sebagai acuan untuk:
 - Animation
 - Interaction
 
-Implementasi frontend harus dibuat sedekat mungkin dengan desain dan prototype Figma.
+Jika Figma MCP tersedia dan terhubung, gunakan Figma yang diberikan user sebagai referensi.
 
-Jangan mengubah desain berdasarkan asumsi sendiri jika informasi yang dibutuhkan sudah tersedia di Figma.
+Implementasikan desain sedekat mungkin dengan Figma.
 
-Jika terdapat bagian Figma yang tidak jelas dan keputusan tersebut memengaruhi tampilan atau UX, tanyakan kepada user terlebih dahulu.
+Jangan mengubah desain berdasarkan asumsi sendiri.
+
+Jika bagian Figma tidak jelas dan memengaruhi hasil desain, tanyakan kepada user terlebih dahulu.
 
 ---
 
-## 11. Responsive Design
+## 12. Responsive Design
 
-Aplikasi ini ditujukan untuk penggunaan mobile.
+Aplikasi ditujukan untuk penggunaan mobile.
 
 Prioritaskan mobile-first design.
 
 Pastikan:
 - Layout tidak keluar dari phone container.
-- Elemen tidak saling bertabrakan.
-- Text tidak terpotong secara tidak sengaja.
+- Elemen tidak bertabrakan.
+- Text tidak terpotong.
 - Button dapat digunakan dengan baik.
 - Gambar memiliki ukuran yang sesuai.
-- Tampilan tetap responsive.
-
-Gunakan Bootstrap responsive utilities jika sesuai dengan struktur project.
+- Tampilan responsive.
 
 ---
 
-## 12. Do Not Break Existing Features
+## 13. Do Not Break Existing Features
 
-Fitur yang sudah ada harus tetap berfungsi setelah perubahan.
+Fitur yang sudah ada harus tetap berfungsi.
 
-Jangan mengubah fitur yang tidak berhubungan dengan tugas.
+Jangan mengubah fitur yang tidak berkaitan dengan tugas.
 
 Jangan melakukan refactoring besar jika tidak diperlukan.
 
-Jangan menghapus kode yang sudah ada hanya untuk membuat kode baru terlihat lebih sederhana.
-
-Jika perubahan pada kode lama benar-benar diperlukan untuk fitur yang diminta, lakukan perubahan seminimal mungkin.
+Lakukan perubahan seminimal mungkin.
 
 ---
 
-## 13. No Unrequested Changes
+## 14. No Unrequested Changes
 
 Jangan melakukan perubahan tambahan yang tidak diminta.
 
-Jika menemukan masalah lain yang tidak berhubungan dengan tugas:
+Jika menemukan masalah lain yang tidak berhubungan dengan tugas, jangan langsung memperbaikinya.
 
-- Jangan langsung memperbaikinya.
-- Jangan mengubah file tersebut.
-- Laporkan masalah tersebut kepada user.
-
-Contoh:
-
-Jika user meminta memperbaiki Login Page, jangan sekaligus mengubah Landing Page, Motivation Page, atau fitur lain.
-
----
-
-## 14. Task Execution
-
-Setiap pekerjaan harus dilakukan secara bertahap.
-
-Ketika user memberikan tugas:
-
-1. Pahami instruksi user.
-2. Periksa file dan struktur yang berkaitan dengan tugas.
-3. Periksa implementasi yang sudah ada.
-4. Tentukan perubahan minimum yang diperlukan.
-5. Implementasikan hanya bagian yang diminta.
-6. Test perubahan tersebut.
-7. Pastikan fitur yang sudah ada tidak rusak.
-8. Laporkan hasil pekerjaan.
-
-Jangan melanjutkan ke tugas berikutnya tanpa instruksi user.
+Laporkan masalah tersebut kepada user.
 
 ---
 
 ## 15. Before Coding
 
-Sebelum melakukan perubahan besar:
+Sebelum coding:
 
-- Baca struktur project.
-- Baca file yang berkaitan dengan tugas.
-- Periksa CSS yang digunakan.
-- Periksa asset yang digunakan.
-- Periksa komponen yang sudah tersedia.
-- Periksa hubungan halaman jika diperlukan.
-
-Jangan langsung membuat kode baru tanpa memahami kode yang sudah ada.
+1. Baca AGENTS.md.
+2. Pahami instruksi user.
+3. Periksa struktur project.
+4. Periksa file yang berkaitan dengan tugas.
+5. Periksa HTML, CSS, dan JavaScript.
+6. Periksa asset.
+7. Periksa komponen yang tersedia.
+8. Periksa Figma jika diberikan.
+9. Tentukan perubahan minimum yang diperlukan.
 
 ---
 
-## 16. After Completing a Task
+## 16. Task Execution
+
+Ketika user memberikan tugas:
+
+1. Pahami instruksi.
+2. Periksa file yang berkaitan.
+3. Periksa kode yang sudah ada.
+4. Periksa Figma jika tersedia.
+5. Implementasikan HANYA bagian yang diminta.
+6. Test perubahan.
+7. Pastikan fitur lama tidak rusak.
+8. Laporkan hasil.
+9. Berhenti dan tunggu instruksi berikutnya.
+
+Jangan melanjutkan ke fitur berikutnya tanpa instruksi user.
+
+---
+
+## 17. After Completing a Task
 
 Setelah tugas selesai:
 
-1. Berhenti mengerjakan.
-2. Jangan melanjutkan fitur lain.
-3. Jelaskan perubahan yang telah dilakukan.
-4. Jelaskan file yang diubah.
-5. Jelaskan jika ada masalah atau bagian yang belum selesai.
-6. Tunggu instruksi berikutnya dari user.
+- Berhenti mengerjakan.
+- Jangan melanjutkan fitur lain.
+- Jelaskan file yang diubah.
+- Jelaskan perubahan yang dilakukan.
+- Jelaskan masalah jika ada.
+- Jelaskan sumber asset baru jika ada.
+- Tunggu instruksi berikutnya.
 
 ---
 
-## 17. Important Rule
+## 18. Important Rule
 
-Prioritas utama Codex:
+Prioritas Codex:
 
 1. Instruksi langsung dari user.
 2. Prototype/design Figma.
 3. Struktur dan kode project yang sudah ada.
-4. Aturan dalam file ini.
+4. Asset yang sudah tersedia.
+5. Aturan dalam AGENTS.md.
 
-Jangan mengambil keputusan besar sendiri jika instruksi user belum jelas.
+Project dikembangkan secara bertahap.
 
-Project ini dikembangkan secara bertahap.
+Codex hanya mengerjakan bagian frontend yang diperintahkan user.
 
-User menentukan fitur apa yang dikerjakan dan kapan fitur tersebut dikerjakan.
-
-Codex bertugas mengimplementasikan bagian frontend yang diperintahkan user.
+Jika informasi penting tidak tersedia atau instruksi tidak jelas, tanyakan kepada user terlebih dahulu daripada membuat asumsi besar.

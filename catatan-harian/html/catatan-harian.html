@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MooRasa - Catatan Harian</title>
+<link rel="stylesheet" href="../../bootstrap-5.3.8-dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../motivation%20page/css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css"></head>
+<body>
+    <main class="mobile-container daily-app" aria-label="Catatan Harian MooRasa">
+        <header class="daily-header">
+            <a class=" brand daily-brand" href="../../motivation%20page/html/dashboard.html" aria-label="Kembali ke Beranda">
+                <img src="../../design-assets/logo_besar.png" alt="">
+                <span>MooRasa</span>
+            </a>
+            <h1>Catatan Harian</h1>
+            <img class="daily-profile" src="../../design-assets/profil.jpg" alt="Profil pengguna">
+        </header>
+        <section class="daily-content" aria-labelledby="history-title">
+            <div class="daily-actions">
+                <a class="back-button" href="../../motivation%20page/html/dashboard.html" aria-label="Kembali ke Beranda">
+                    <img src="../../design-assets/arrow.png" alt="">
+                </a>
+                <a class="add-button" href="tambah-catatan.html" aria-label="Tambah catatan harian">
+                    <img src="../../design-assets/plus.png" alt="">
+                </a>
+            </div>
+            <h2 id="history-title">Riwayat Catatan</h2>
+            <div class="notes-grid" id="notes-grid" aria-live="polite"></div>
+        </section>
+        <div class="delete-modal hidden" id="delete-modal" role="dialog" aria-modal="true" aria-labelledby="delete-title">
+            <div class="delete-dialog">
+                <div class="delete-warning" aria-hidden="true">
+                    <img src="../../design-assets/delete.png" alt="">
+                </div>
+                <p id="delete-title">Apakah Anda yakin ingin menghapus catatan ini?</p>
+                <div class="delete-buttons">
+                    <button class="cancel-delete" id="cancel-delete" type="button">Batal</button>
+                    <button class="confirm-delete" id="confirm-delete" type="button">Hapus</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="../script.js"></script>
+</body>
+</html>
