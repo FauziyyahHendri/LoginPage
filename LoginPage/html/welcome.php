@@ -34,14 +34,11 @@
                 <a href="../html/login.php?role=Pengguna">
                 Pengguna
             </a>
-            </button>
         
             <button class="btn-custom btn-signup"> 
                 <a href="../html/login.php?role=Psikolog">
                  Psikolog
             </a>
-               
-            </button>
         </div>
 
         
