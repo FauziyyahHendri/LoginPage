@@ -1,3 +1,67 @@
+<?php
+
+$host = "localhost";
+$user = "root";
+$pass = "";
+$db = "moorasa_db";
+
+$koneksi = mysqli_connect($host, $user, $pass, $db);
+
+if (!$koneksi) {
+    die("Koneksi database gagal: " . mysqli_connect_error());
+}
+
+if (isset($_POST['daftar'])) {
+
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $confirm_password = $_POST['confirm_pass'];
+
+
+    // Cek password dan konfirmasi password
+    if ($password != $confirm_password) {
+
+        die("Konfirmasi password tidak sesuai.");
+
+    }
+
+
+    // Cek apakah email sudah terdaftar
+    $query = "SELECT * FROM login WHERE email = ?";
+
+    $stmt = mysqli_prepare($koneksi, $query);
+
+    mysqli_stmt_bind_param($stmt, "s", $email);
+
+    mysqli_stmt_execute($stmt);
+
+    $hasil = mysqli_stmt_get_result($stmt);
+
+
+
+    // Hash password
+    $password_hash = password_hash($password, PASSWORD_DEFAULT);
+
+
+    // Masukkan data ke database
+    $query = "INSERT INTO login (email, password, role)
+              VALUES (?, ?, 'Pengguna')";
+
+    $stmt = mysqli_prepare($koneksi, $query);
+
+    mysqli_stmt_bind_param(
+        $stmt,
+        "ss",
+        $email,
+        $password_hash
+    );
+
+    header("Location:../../motivation page/html/popup.html");
+
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -28,23 +92,23 @@
 
         <span class="form-label-custom">Buat Akun Anda</span>
 
-        <form action="../../motivation page/html/popup.html">
+        <form action="signup.php" method="POST">
             <div class="input-wrapper">
                 <label for="email">Masukkan Email Anda</label>
-                <input type="email" class="form-control" placeholder="Email" >
+                <input type="email" name="email" class="form-control" placeholder="Email" >
             </div>
 
             <div class="input-wrapper">
                 <label for="password">Buat Kata Sandi Anda</label>
-                <input type="password" class="form-control" placeholder="Password" >
+                <input type="password" name="password" class="form-control" placeholder="Password" >
             </div>
 
             <div class="input-wrapper">
                 <label for="password">Konfirmasi Kata Sandi Anda</label>
-                <input type="password" class="form-control" placeholder="Confirm Password" >
+                <input type="password" name="confirm_pass" class="form-control" placeholder="Confirm Password" >
             </div>
 
-            <button type="submit" class="btn-card btn-custom btn-signup"> Buat Akun</button>
+            <button type="submit" name="daftar" class="btn-card btn-custom btn-signup"> Buat Akun</button>
 
         </form>
 
