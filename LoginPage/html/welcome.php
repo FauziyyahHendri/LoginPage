@@ -30,12 +30,14 @@
         <h1 class="logo-text" style="font-size: 2rem; margin-bottom: 30px;">MooRasa</h1>
 
         <div class="btn-card">
-            <button class="btn-custom btn-login"><a href="login.html">
+            <button class="btn-custom btn-login">
+                <a href="../html/login.php?role=Pengguna">
                 Pengguna
             </a>
             </button>
         
-            <button class="btn-custom btn-signup"> <a href="#">
+            <button class="btn-custom btn-signup"> 
+                <a href="../html/login.php?role=Psikolog">
                  Psikolog
             </a>
                
