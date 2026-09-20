@@ -41,6 +41,7 @@ body {
     box-shadow: 0 4px 12px rgba(70, 70, 70, 0.2);    
     text-align: center;
     overflow: hidden;
+    overflow-y: auto;
 }
 
 /*Splash Screen (halaman transisi) */
@@ -144,8 +145,8 @@ body {
 
 /* Ukuran Ikon Mahkota */
 .crown-icon {
-  width: 24px;
-  height: 24px;
+  width: 32px;
+  height: 32px;
   object-fit: contain;
   cursor: pointer;
 }
