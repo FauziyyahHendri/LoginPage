@@ -80,6 +80,7 @@ a.daily-brand span,
     border-radius:50%;
     object-fit:cover;
 }
+.daily-profile-link{justify-self:end;display:block;width:27px;height:27px}
 .daily-content,.note-form-area{
     padding:19px 30px 34px;
     height:calc(100% - 105px);

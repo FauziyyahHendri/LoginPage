@@ -1,4 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const profileLink = document.querySelector('[data-profile-link]');
+
+  if (profileLink) {
+    try {
+      const profile = JSON.parse(localStorage.getItem('moorasa-user-profile')) || {};
+
+      if (profile.complete) {
+        profileLink.href = '../../profile/html/profile.html';
+      }
+    } catch {
+      // Tetap arahkan pengguna baru ke halaman lengkapi profil.
+    }
+  }
+
   const dashboard = document.getElementById('dashboard');
   const touchOverlay = document.getElementById('touch-overlay');
   const motivationModal = document.getElementById('motivation-modal');

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MooRasa - Lengkapi Profil</title>
+  <link rel="stylesheet" href="../../bootstrap-5.3.8-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../motivation%20page/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <main class="mobile-container profile-app">
+    <header class="profile-header">
+      <a class="profile-brand" href="../../motivation%20page/html/dashboard.html">
+        <img src="../../design-assets/logo_besar.png" alt=">
+        <span>MooRasa</span>
+      </a>
+      <h1>Profil Pengguna</h1>
+    </header>
+
+    <section class="profile-form-section">
+      <a class="profile-back" href="../../motivation%20page/html/dashboard.html" aria-label="Kembali">
+        <img src="../../design-assets/arrow.png" alt=">
+      </a>
+      <h2>Lengkapi Profil Anda</h2>
+      <p class="profile-intro">Lengkapi data diri agar pengalaman MooRasa lebih personal.</p>
+
+      <form id="profile-form" novalidate>
+        <div class="profile-photo">
+          <img src="../../design-assets/profil.jpg" alt"Foto profil">
+        </div>
+        <label for="profile-name">Nama Pengguna</label>
+        <input id="profile-name" type="text" placeholder=Masukkan nama lengkap">
+
+        <label for=profile-email">Email</label>
+        <input id="profile-email" type="email placeholder="Masukkan email">
+
+        <label for="profile-phone>No. Hp</label>
+        <input id="profile-phone" type="tel placeholder="Masukkan nomor hp">
+
+        <label for="profile-birthdate">Tanggal Lahir</label>
+        <input id=profile-birthdate" type="date>
+  
+        <label for="profile-gender">Jenis Kelamin</label>
+        <select name="jenkel" id="profile-gender">
+          <option value="" disabled-selected>Pilih jenis kelamin</option>
+          <option value="laki-laki">Laki-Laki</option>
+          <option value="perempuan">perempuan</option>
+        </select>
+
+        <label for="profile-bio">Bio</label>
+        <textarea name="bio" id="profile-bio"></textarea>
+
+
+        <button id="profile-save" class="profile-save" type="button" disabled>Simpan Profil</button>
+      </form>
+    </section>
+  </main>
+  <script src="../script.js"></script>
+</body>
+</html>

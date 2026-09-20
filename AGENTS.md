@@ -146,14 +146,17 @@ Jangan memindahkan atau menghapus asset yang sudah digunakan tanpa alasan yang j
 
 Jika membutuhkan icon:
 
-1. Periksa terlebih dahulu apakah icon tersebut sudah tersedia di project.
-2. Jika tersedia, gunakan kembali.
-3. Jika belum tersedia, prioritaskan mencari icon dari Flaticon.
-4. Pilih icon yang sesuai dengan desain dan fungsi pada Figma.
-5. Jangan membuat icon sendiri jika icon yang sesuai tersedia di Flaticon.
-6. Jangan mengganti icon yang sudah ada tanpa instruksi user.
-7. Perhatikan lisensi dan ketentuan penggunaan icon dari Flaticon.
-8. Jika icon membutuhkan atribusi, beri tahu user.
+1. Semua icon berbentuk gambar png.
+2. Periksa terlebih dahulu apakah icon tersebut sudah tersedia di project.
+3. Jika tersedia, gunakan kembali.
+4. Beberapa gambar icon juga sudah tersedia di folder `design-assets`.
+5. Jika belum tersedia, prioritaskan mencari icon dari Flaticon.
+6. Gunakan icon dari Flaticon yang berupa gambar (png)
+7. Pilih icon yang sesuai dengan desain dan fungsi pada Figma.
+8. Jangan membuat icon sendiri jika icon yang sesuai tersedia di Flaticon.
+9. Jangan mengganti icon yang sudah ada tanpa instruksi user.
+10. Perhatikan lisensi dan ketentuan penggunaan icon dari Flaticon.
+11. Jika icon membutuhkan atribusi, beri tahu user.
 
 Figma menjadi acuan untuk bentuk, ukuran, posisi, dan penggunaan icon.
 

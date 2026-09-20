@@ -159,6 +159,7 @@ body {
   display: block;
   cursor: pointer;
 }
+.profile-link { display: block; width: 32px; height: 32px; }
 
 /* 1. Pengaturan Dasar Dashboard*/
 .dashboard {

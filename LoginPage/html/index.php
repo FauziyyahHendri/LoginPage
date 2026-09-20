@@ -22,7 +22,7 @@
     
     <div id="splash-screen">
         <img src="../img/logo.png" class="illustration" alt="logo">
-        <h2 class="logo-text">MooRasa</h2>
+        <span class="logo-text">MooRasa</span>
     </div>
 
     <div id="welcome-screen">

@@ -84,7 +84,7 @@ if (isset($_POST['daftar'])) {
 <body>
 
     <div class="phone-canvas">
-        <h1 class="logo-text">MooRasa</h1>
+        <span class="logo-text">MooRasa</span>
 
         <div class="">
             <img src="../img/logo.png" class="logo" alt="Moorasa Icon">

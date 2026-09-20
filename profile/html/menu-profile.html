@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MooRasa - Menu Profil</title>
+  <link rel="stylesheet" href="../../motivation%20page/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { background: #fff7f7 !important; }
+
+    .profile-menu-screen {
+      width: 450px;
+      height: 870px;
+      margin: 35px 0;
+      position: relative;
+      overflow: hidden;
+      background: #fff;
+      border-radius: 50px;
+      box-shadow: 0 4px 12px rgba(70, 70, 70, .2);
+      font-family: "Plus Jakarta Sans", sans-serif;
+    }
+
+    .blurred-profile {
+      height: 100%;
+      padding: 75px 30px;
+      filter: blur(5px);
+      opacity: .56;
+      text-align: center;
+      pointer-events: none;
+    }
+
+    .blurred-profile img {
+      width: 125px;
+      height: 125px;
+      margin-top: 115px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .blurred-profile h1 {
+      margin: 18px 0 7px;
+      color: #1f2937;
+      font-size: 22px;
+    }
+
+    .blurred-profile p {
+      color: #7e7e7e;
+      font-size: 13px;
+    }
+
+    .menu-scrim {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, .2);
+    }
+
+    .menu-panel {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      width: 57%;
+      padding: 55px 30px;
+      background: #679cbc;
+      border-radius: 45px 0 0 45px;
+      color: #fff;
+      box-shadow: -6px 0 16px rgba(0, 0, 0, .14);
+    }
+
+    .menu-user {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      margin-top: 235px;
+    }
+
+    .menu-user img {
+      width: 57px;
+      height: 57px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .menu-user h1 {
+      margin: 0;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1.35;
+    }
+
+    .menu-options {
+      display: grid;
+      gap: 31px;
+      margin-top: 65px;
+    }
+
+    .menu-option {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      width: fit-content;
+      border: 0;
+      background: transparent;
+      color: #fff;
+      font: 600 17px "Plus Jakarta Sans", sans-serif;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .menu-option img {
+      width: 25px;
+      height: 25px;
+      object-fit: contain;
+    }
+
+    .logout-modal {
+      position: absolute;
+      inset: 0;
+      z-index: 5;
+      display: grid;
+      place-items: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, .61);
+    }
+
+    .logout-modal.hidden { display: none; }
+
+    .logout-dialog {
+      width: 100%;
+      max-width: 380px;
+      padding: 33px 16px 18px;
+      border-radius: 10px;
+      background: #fff;
+      color: #7e7e7e;
+      text-align: center;
+    }
+
+    .logout-dialog > img { width: 50px; height: 50px; object-fit: contain; }
+    .logout-dialog p { margin: 15px auto 30px; font-size: 18px; font-weight: 600; }
+    .logout-dialog div { display: grid; grid-template-columns: 1fr 1fr; gap: 13px; }
+    .logout-dialog button { height: 43px; border-radius: 10px; font: 600 15px "Plus Jakarta Sans", sans-serif; cursor: pointer; }
+    #cancel-logout { border: 1px solid #679cbc; background: #fff; color: #679cbc; }
+    #confirm-logout { border: 1px solid #c94242; background: #ff5e5e; color: #fff; }
+
+    @media (max-width: 500px) {
+      .profile-menu-screen { width: 100%; min-height: 100vh; height: 100vh; margin: 0; border-radius: 0; }
+      .menu-panel { border-radius: 38px 0 0 38px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="profile-menu-screen">
+    <section class="blurred-profile" aria-hidden="true">
+      <img src="../../design-assets/profil.jpg" alt="">
+      <h1>Pengguna MooRasa</h1>
+      <p>Profil Pengguna</p>
+    </section>
+
+    <a class="menu-scrim" href="profile.html" aria-label="Tutup menu"></a>
+
+    <aside class="menu-panel" aria-label="Menu profil">
+      <div class="menu-user">
+        <img src="../../design-assets/profil.jpg" alt="Foto profil">
+        <h1 id="menu-name">Pengguna MooRasa</h1>
+      </div>
+
+      <nav class="menu-options" aria-label="Pilihan profil">
+        <button class="menu-option" id="logout-button" type="button">
+          <img src="../../design-assets/Group 196.png" alt="">Keluar
+        </button>
+        <a class="menu-option" href="#">
+          <img src="../../design-assets/themes 1.png" alt="">Tema
+        </a>
+      </nav>
+    </aside>
+
+    <div class="logout-modal hidden" id="logout-modal" role="dialog" aria-modal="true" aria-labelledby="logout-title">
+      <div class="logout-dialog">
+        <img src="../../design-assets/delete.png" alt="">
+        <p id="logout-title">Apakah Anda yakin ingin keluar dari akun?</p>
+        <div>
+          <button id="cancel-logout" type="button">Batal</button>
+          <button id="confirm-logout" type="button">Keluar</button>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="../script.js"></script>
+</body>
+</html>
