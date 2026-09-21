@@ -36,12 +36,19 @@ body {
     background: white;
     border-radius: 50px;
     margin: 35px 0 35px 0;
-    padding: 30px 15px 30px 15px;
+    padding: 0;
     position: relative;
     box-shadow: 0 4px 12px rgba(70, 70, 70, 0.2);    
     text-align: center;
     overflow: hidden;
     overflow-y: auto;
+}
+/* Mempercantik scrollbar untuk browser Chrome/Safari/Edge */
+.mobile-container::-webkit-scrollbar {
+  width: 6px;
+}
+.mobile-container::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 /*Splash Screen (halaman transisi) */
@@ -93,9 +100,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 16px;
+  padding: 33px 33px 28px 33px;
   background: #ffffff;
   position: relative; /* Agar posisi judul bisa dipaksa ke tengah */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
 }
 
 /*logo nama*/
